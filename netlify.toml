@@ -1,5 +1,5 @@
 [build]
-command = "yarn rw prisma generate && yarn rw build --verbose"
+command = "yarn rw build api --verbose && yarn rw build web --verbose"
 publish = "web/dist"
 functions = "api/dist/functions"
 
