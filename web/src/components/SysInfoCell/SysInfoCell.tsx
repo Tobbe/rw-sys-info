@@ -23,5 +23,10 @@ export const Failure = ({
 export const Success = ({
   sysInfo,
 }: CellSuccessProps<FindSysInfoQuery, FindSysInfoQueryVariables>) => {
-  return <div>{sysInfo.sysInfo}</div>
+  const sysInfoObj = JSON.parse(sysInfo.sysInfo)
+  return (
+    <pre>
+      <code>{JSON.stringify(sysInfoObj, null, 2)}</code>
+    </pre>
+  )
 }
